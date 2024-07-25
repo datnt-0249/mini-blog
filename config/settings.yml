@@ -1,0 +1,2 @@
+regexes:
+  email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
