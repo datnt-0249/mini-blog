@@ -20,9 +20,18 @@
       </ul>
     </div>
     <div class="flex items-center md:order-2 space-x-3 md:space-x-0">
-      <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button">
+      <% if logged_in? %>
         <img class="w-10 h-10 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_kSSoomJ9hiFXmiF2RdZlwx72Y23XsT6iwQ&s" alt="user photo">
-      </button>
+        <%= @current_user.email %>
+        <span class="px-2">|</span>
+        <%= link_to t(".logout"), logout_path, data: {"turbo-method": :delete} %>
+      <% else %>
+        <div>
+          <%= link_to t(".signup"), sign_up_path %>
+          <span class="px-2">|</span>
+          <%= link_to t(".login"), login_path %>
+        </div>
+      <% end %>
     </div>
   </div>
 </nav>

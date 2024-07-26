@@ -1,4 +1,10 @@
 vi:
+  activerecord:
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
   layouts:
     header:
       title: "Mini Blog"
@@ -6,6 +12,9 @@ vi:
       home: "Trang chủ"
       posts: "Bài viết"
       users: "Người dùng"
+      signup: "Đăng ký"
+      login: "Đăng nhập"
+      logout: "Đăng xuất"
     footer:
       app_name: "Mini Blog"
       right: "Đã đăng ký Bản quyền."
@@ -15,3 +24,23 @@ vi:
   static_pages:
     home:
       title: "Trang chủ"
+  users:
+    new:
+      title: "Đăng ký"
+      user_name: "Họ và tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      success: "Đăng ký thành công"
+      submit: "Đăng ký"
+    show:
+      user_not_found: "Không tìm thấy người dùng"
+    create:
+      success: "Tạo tài khoản thành công"
+      failed: "Taọ tài khoản thất bại"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      submit: "Đăng nhập"
+    create:
+      invalid: "Email hoặc mật khẩu không hợp lệ"
