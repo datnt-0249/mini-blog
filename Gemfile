@@ -50,6 +50,9 @@ gem "bootsnap", require: false
 
 gem "config"
 gem "faker"
+gem "htmlbeautifier"
+gem "rails-i18n"
+gem "tailwindcss-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html

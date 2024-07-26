@@ -1,0 +1,17 @@
+vi:
+  layouts:
+    header:
+      title: "Mini Blog"
+      app_name: "Mini Blog"
+      home: "Trang chủ"
+      posts: "Bài viết"
+      users: "Người dùng"
+    footer:
+      app_name: "Mini Blog"
+      right: "Đã đăng ký Bản quyền."
+      about: "Về chúng tôi"
+      licensing: "Giấy phép"
+      contact: "Liên hệ"
+  static_pages:
+    home:
+      title: "Trang chủ"

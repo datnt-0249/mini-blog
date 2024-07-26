@@ -1,0 +1,18 @@
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-between">
+    <span class="text-sm text-gray-500 sm:text-center">© 2023
+        <%= t(".app_name")%>. <%= t(".right") %>
+    </span>
+    <ul class="flex items-center mt-3 text-sm font-medium text-gray-500">
+      <li class="px-4">
+        <%= link_to t(".about"), "#", class: "hover:underline me-4 md:me-6"%>
+      </li>
+      <li class="px-4">
+        <%= link_to t(".licensing"), "#", class: "hover:underline me-4 md:me-6" %>
+      </li>
+      <li class="px-4">
+        <%= link_to t(".contact"), "#", class: "hover:underline" %>
+      </li>
+    </ul>
+  </div>
+</footer>
