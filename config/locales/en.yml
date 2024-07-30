@@ -1,4 +1,10 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        name: "Username"
+        email: "Email"
+        password: "Password"
   layouts:
     header:
       title: "Mini Blog"
@@ -6,6 +12,9 @@ en:
       home: "Home"
       posts: "Posts"
       users: "Users"
+      signup: "Sign Up"
+      login: "Login"
+      logout: "Logout"
     footer:
       app_name: "Mini Blog"
       right: "All Rights Reserved."
@@ -15,3 +24,23 @@ en:
   static_pages:
     home:
       title: "Home Page"
+  users:
+    new:
+      title: "Sign up"
+      user_name: "Username"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password confirmation"
+      success: "Sign up successfully"
+      submit: "Submit"
+    show:
+      user_not_found: "User not found"
+    create:
+      success: "Your account has been successfully created"
+      failed: "Account creation failed "
+  sessions:
+    new:
+      title: "Login"
+      submit: "Submit"
+    create:
+      invalid: "Invalid email or password"
