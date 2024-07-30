@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 gem "config"
 gem "faker"
 gem "htmlbeautifier"
+gem "pagy"
 gem "rails-i18n"
 gem "tailwindcss-rails"
 

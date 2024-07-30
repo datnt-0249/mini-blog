@@ -5,6 +5,9 @@ en:
         name: "Username"
         email: "Email"
         password: "Password"
+      post:
+        title: "Title"
+        content: "Content"
   layouts:
     header:
       title: "Mini Blog"
@@ -34,6 +37,7 @@ en:
       success: "Sign up successfully"
       submit: "Submit"
     show:
+      title: "Trang cá nhân"
       user_not_found: "User not found"
     create:
       success: "Your account has been successfully created"
@@ -44,3 +48,26 @@ en:
       submit: "Submit"
     create:
       invalid: "Invalid email or password"
+  posts:
+    index:
+      title: "Posts"
+      create: "Create post"
+    new:
+      title: "Create Post"
+      post_title: "Title"
+      post_content: "Content"
+      view_mode: "View mode"
+      submit: "Create Post"
+      required_login: "You need login first"
+    create:
+      success: "Create post successfully"
+      invalid: "Create post failed"
+    edit:
+      title: "Edit post"
+      submit: "Save Post"
+  post:
+    status:
+      private: "Private"
+      public: "Public"
+    read_more: "Read more"
+    edit: "Edit"

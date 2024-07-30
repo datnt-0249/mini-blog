@@ -4,3 +4,4 @@ digits:
   length_6: 6
   length_50: 50
   length_255: 255
+  per_page_10: 10

@@ -5,6 +5,9 @@ vi:
         name: "Tên"
         email: "Email"
         password: "Mật khẩu"
+      post:
+        title: "Tiêu đề"
+        content: "Nội dung"
   layouts:
     header:
       title: "Mini Blog"
@@ -34,6 +37,7 @@ vi:
       success: "Đăng ký thành công"
       submit: "Đăng ký"
     show:
+      title: "Profile"
       user_not_found: "Không tìm thấy người dùng"
     create:
       success: "Tạo tài khoản thành công"
@@ -44,3 +48,26 @@ vi:
       submit: "Đăng nhập"
     create:
       invalid: "Email hoặc mật khẩu không hợp lệ"
+  posts:
+    index:
+      title: "Bài viết"
+      create: "Tạo bài viết"
+    new:
+      title: "Tạo bài viết"
+      post_title: "Tiêu đề"
+      post_content: "Nội dung"
+      view_mode: "Chế độ xem"
+      submit: "Tạo bài viết"
+      required_login: "Bạn cần đăng nhập trước"
+    create:
+      success: "Tạo bài viết thành công"
+      invalid: "Thông tin bài viết không hợp lệ"
+    edit:
+      title: "Chỉnh sửa bài viết"
+      submit: "Lưu chỉnh sửa"
+  post:
+    status:
+      private: "Private"
+      public: "Public"
+    read_more: "Xem thêm"
+    edit: "Chỉnh sửa"
