@@ -22,9 +22,17 @@
         <%= post.likes.count %>
       </div>
       <% if current_user? post.user %>
-        <%= link_to "#", class: "py-1 px-2 text-sm cursor-pointer font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-yellow-400" do %>
+        <%= link_to edit_post_path(post), class: "py-1 px-2 text-sm cursor-pointer font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-yellow-400" do %>
           <i class="fa-solid fa-pen"></i>
-          <span>Edit</span>
+          <span><%= t(".edit") %></span>
+        <% end %>
+        <%=
+          link_to post,
+          data: {"turbo-method": :delete, "turbo-confirm": t(".confirm_delete")},
+          class: "py-1 px-2 text-sm cursor-pointer font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-yellow-400" do
+        %>
+          <i class="fa-solid fa-pen"></i>
+          <span><%= t(".delete") %></span>
         <% end %>
       <% end %>
     </div>

@@ -54,9 +54,6 @@ en:
       create: "Create post"
     new:
       title: "Create Post"
-      post_title: "Title"
-      post_content: "Content"
-      view_mode: "View mode"
       submit: "Create Post"
       required_login: "You need login first"
     create:
@@ -64,7 +61,22 @@ en:
       invalid: "Create post failed"
     edit:
       title: "Edit post"
+      post_not_found: "Post not found"
       submit: "Save Post"
+    update:
+      success: "Updated post successfully"
+      failed: "Edit post failed"
+    destroy:
+      success: "Delete post successfully"
+      failed: "Delete post failed"
+    post:
+      confirm_delete: "Are you sure you want to delete this post?"
+      edit: "Edit"
+      delete: "Delete"
+    form:
+      post_title: "Title"
+      post_content: "Content"
+      view_mode: "View mode"
   post:
     status:
       private: "Private"

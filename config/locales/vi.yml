@@ -54,9 +54,6 @@ vi:
       create: "Tạo bài viết"
     new:
       title: "Tạo bài viết"
-      post_title: "Tiêu đề"
-      post_content: "Nội dung"
-      view_mode: "Chế độ xem"
       submit: "Tạo bài viết"
       required_login: "Bạn cần đăng nhập trước"
     create:
@@ -64,7 +61,22 @@ vi:
       invalid: "Thông tin bài viết không hợp lệ"
     edit:
       title: "Chỉnh sửa bài viết"
+      post_not_found: "Không tìm thấy bài viết"
       submit: "Lưu chỉnh sửa"
+    update:
+      success: "Chỉnh sửa thành công"
+      failed: "Chỉnh sửa thất bại"
+    destroy:
+      success: "Xóa thành công"
+      failed: "Xóa thất bại"
+    post:
+      confirm_delete: "Bạn có chắc chắn muốn xóa bài viết này?"
+      edit: "Chỉnh sửa"
+      delete: "Xóa"
+    form:
+      post_title: "Tiêu đề"
+      post_content: "Nội dung"
+      view_mode: "Chế độ xem"
   post:
     status:
       private: "Private"
