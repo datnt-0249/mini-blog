@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pagy.nav {
+  @apply inline-flex gap-x-2;
+}
+
+.pagy.nav a {
+  @apply flex items-center justify-center h-10 w-10 text-blue-600 border rounded-full hover:bg-blue-100;
+}
+
+.pagy.nav .current {
+  @apply bg-blue-500 text-white;
+}
+
+label.required::after {
+  content: "*";
+  color: red;
+}

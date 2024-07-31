@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i(show)
+  before_action :logged_in_user, only: %i(show)
 
   def new
     @user = User.new
@@ -16,7 +17,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @pagy, @posts = pagy(@user.posts.newest,
+                         items: Settings.digits.per_page_10)
+  end
 
   private
   def user_params
