@@ -1,0 +1,7 @@
+<div id="like-<%= post.id %>">
+  <% if current_user.liked? post %>
+    <%= render partial: "posts/unlike", locals: {post:} %>
+  <% else %>
+    <%= render partial: "posts/like", locals: {post:} %>
+  <% end %>
+</div>

@@ -1,0 +1,4 @@
+<%= button_to post_likes_path(post), method: :post, class: "py-1 px-2 text-sm cursor-pointer font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700" do %>
+  <i class="fa-regular fa-heart me-1"></i>
+  <%= post.likes.count %>
+<% end %>
