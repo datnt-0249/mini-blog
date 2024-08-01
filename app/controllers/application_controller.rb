@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   before_action :set_locale
   include SessionsHelper
   include Pagy::Backend
@@ -18,5 +19,10 @@ class ApplicationController < ActionController::Base
     store_location
     flash[:danger] = t ".required_login"
     redirect_to login_path, status: :see_other
+  end
+
+  def record_not_found
+    flash[:warning] = t ".user_not_found"
+    redirect_to root_path
   end
 end
