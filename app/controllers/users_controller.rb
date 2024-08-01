@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i(show)
+  before_action :find_user, only: %i(show)
   before_action :logged_in_user, only: %i(show)
+
+  def index
+    @pagy, @users = pagy(User.ordered_by_name,
+                         limit: Settings.digits.per_page_10)
+  end
 
   def new
     @user = User.new
@@ -19,7 +24,7 @@ class UsersController < ApplicationController
 
   def show
     @pagy, @posts = pagy(@user.posts.newest,
-                         items: Settings.digits.per_page_10)
+                         limit: Settings.digits.per_page_10)
   end
 
   private
@@ -27,11 +32,7 @@ class UsersController < ApplicationController
     params.require(:user).permit User::UPDATABLE_ATTRS
   end
 
-  def set_user
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:warning] = t ".user_not_found"
-    redirect_to root_path
+  def find_user
+    @user = User.find params[:id]
   end
 end

@@ -1,0 +1,12 @@
+<div class="flex justify-between items-center p-2">
+  <span class="w-2/5">
+    <img class="w-10 h-10 rounded-full inline-block me-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_kSSoomJ9hiFXmiF2RdZlwx72Y23XsT6iwQ&s" alt="user photo">
+    <%= user.name %>
+  </span>
+  <span class="w-2/5 text-left">
+    <%= user.email %>
+  </span>
+  <div class="w-1/5 text-right cursor-pointer">
+    <%= link_to t(".view_detail"), user, class: "py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100" %>
+  </div>
+</div>

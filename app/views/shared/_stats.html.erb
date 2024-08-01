@@ -4,20 +4,25 @@
     <div class="flex items-center mb-3">
       <i class="fa-regular fa-envelope text-gray-600"></i>
       <span class="text-gray-500 ml-2">
-        <%= user.email %>
+        <%= @user.email %>
       </span>
     </div>
     <div class="flex items-center mb-3">
       <i class="fa-regular fa-user text-gray-600"></i>
-      <span class="text-gray-500 ml-2">
-        -
-      </span>
+        <%= render "users/follower_count" %>
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center mb-3">
       <i class="fa-regular fa-square-plus text-gray-600"></i>
-      <span class="text-gray-500 ml-2">
-        -
+      <span id="following_count"  class="text-gray-500 ml-2">
+        <%= pluralize(@user.following.count, t(".following")) %>
       </span>
     </div>
+    <div class="flex items-center mb-3">
+      <i class="fa-regular fa-clipboard text-gray-600"></i>
+      <span id="post_count" class="text-gray-500 ml-2">
+        <%= pluralize(@user.posts.count, t(".post")) %>
+      </span>
+    </div>
+    <%= render "follow_form" %>
   </div>
 </div>

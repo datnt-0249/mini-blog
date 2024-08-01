@@ -1,0 +1,9 @@
+<% provide :title, t(".title") %>
+<div class="flex flex-col mx-auto w-3/5 mt-2 divide-y divide-gray-200">
+  <% if @users.any? %>
+    <%= render @users %>
+    <div class="text-center pt-5">
+      <%== pagy_nav @pagy if @pagy.pages > 1 %>
+    </div>
+  <% end %>
+</div>

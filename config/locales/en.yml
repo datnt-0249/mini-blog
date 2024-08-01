@@ -27,7 +27,15 @@ en:
   static_pages:
     home:
       title: "Home Page"
+  shared:
+    stats:
+      post: "Post"
+      following: "Following"
   users:
+    index:
+      title: "Users"
+    user:
+      view_detail: "View detail"
     new:
       title: "Sign up"
       user_name: "Username"
@@ -42,6 +50,13 @@ en:
     create:
       success: "Your account has been successfully created"
       failed: "Account creation failed "
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
+    follower_count:
+      follower: "Follower"
+    required_login: "You need login first"
   sessions:
     new:
       title: "Login"
@@ -77,9 +92,27 @@ en:
       post_title: "Title"
       post_content: "Content"
       view_mode: "View mode"
+      submit: "Save Post"
+    update:
+      success: "Updated post successfully"
+      failed: "Edit post failed"
+    destroy:
+      success: "Delete post successfully"
+      failed: "Delete post failed"
+    post:
+      confirm_delete: "Are you sure you want to delete this post?"
+    form:
+      post_title: "Title"
+      post_content: "Content"
+      view_mode: "View mode"
   post:
     status:
       private: "Private"
       public: "Public"
     read_more: "Read more"
     edit: "Edit"
+  relationships:
+    create:
+      user_not_found: "User not found"
+    destroy:
+      user_not_found: "User not found"
