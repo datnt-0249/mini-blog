@@ -8,5 +8,7 @@
     <div class="text-center mt-4">
       <%== pagy_nav @pagy if @pagy.pages > 1 %>
     </div>
+  <% else %>
+      <%= render partial: "shared/empty_message", locals: {message: t(".empty_list")} %>
   <% end %>
 </div>

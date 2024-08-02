@@ -48,6 +48,7 @@ en:
     show:
       title: "Trang cá nhân"
       user_not_found: "User not found"
+      empty_list: "This user has not posted anything yet"
     create:
       success: "Your account has been successfully created"
       failed: "Account creation failed "
@@ -68,6 +69,8 @@ en:
     index:
       title: "Posts"
       create: "Create post"
+      empty_list: "There's no post here"
+
     new:
       title: "Create Post"
       submit: "Create Post"
@@ -109,6 +112,7 @@ en:
     following_posts:
       title: "Bảng tin"
       create: "Create post"
+      empty_list: "There's no post here"
   post:
     status:
       private: "Private"
