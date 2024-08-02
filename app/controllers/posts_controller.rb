@@ -43,6 +43,13 @@ class PostsController < ApplicationController
     redirect_to @post.user
   end
 
+  def following_posts
+    @post = Post.by_users(current_user.following)
+                .filter_by_status(:public)
+                .newest
+    @pagy, @posts = pagy(@post, limit: Settings.digits.per_page_10)
+  end
+
   private
   def post_params
     params.require(:post).permit Post::UPDATABLE_ATTRS

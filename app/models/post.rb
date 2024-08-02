@@ -12,6 +12,7 @@ class Post < ApplicationRecord
 
   scope :newest, ->{order(created_at: :desc)}
   scope :filter_by_status, ->(status){status.present? ? where(status:) : all}
+  scope :by_users, ->(users){where(user_id: users)}
 
   class << self
     def statuses_i18n

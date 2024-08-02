@@ -14,6 +14,7 @@ en:
       app_name: "Mini Blog"
       home: "Home"
       posts: "Posts"
+      new_feed: "New Feed"
       users: "Users"
       signup: "Sign Up"
       login: "Login"
@@ -105,6 +106,9 @@ en:
       post_title: "Title"
       post_content: "Content"
       view_mode: "View mode"
+    following_posts:
+      title: "Bảng tin"
+      create: "Create post"
   post:
     status:
       private: "Private"

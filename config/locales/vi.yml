@@ -14,6 +14,7 @@ vi:
       app_name: "Mini Blog"
       home: "Trang chủ"
       posts: "Bài viết"
+      new_feed: "Bảng tin"
       users: "Người dùng"
       signup: "Đăng ký"
       login: "Đăng nhập"
@@ -105,6 +106,9 @@ vi:
       post_title: "Tiêu đề"
       post_content: "Nội dung"
       view_mode: "Chế độ xem"
+    following_posts:
+      title: "New feed"
+      create: "Tạo bài viết"
   post:
     status:
       private: "Private"

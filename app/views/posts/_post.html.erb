@@ -17,7 +17,7 @@
   </p>
   <div class="flex justify-between items-center">
     <div class="flex gap-x-2">
-      <%= render partial: "like_button", locals: {post:} %>
+      <%= render partial: "posts/like_button", locals: {post:} %>
       <% if current_user? post.user %>
         <%= link_to edit_post_path(post), class: "py-1 px-2 text-sm cursor-pointer font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-yellow-400" do %>
           <i class="fa-solid fa-pen"></i>
