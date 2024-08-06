@@ -4,11 +4,13 @@
     <%= render partial: "shared/stats" %>
   </div>
   <div class="w-8/12">
-    <%= render @posts %>
     <% if @posts.any? %>
+      <%= render @posts %>
       <div class="text-center mt-4">
         <%== pagy_nav @pagy %>
       </div>
+    <% else %>
+      <%= render partial: "shared/empty_message", locals: {message: t(".empty_list")} %>
     <% end %>
   </div>
 </div>

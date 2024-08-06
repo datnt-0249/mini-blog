@@ -48,6 +48,7 @@ vi:
     show:
       title: "Profile"
       user_not_found: "Không tìm thấy người dùng"
+      empty_list: "Người dùng này chưa đăng bài viết nào"
     create:
       success: "Tạo tài khoản thành công"
       failed: "Taọ tài khoản thất bại"
@@ -68,6 +69,7 @@ vi:
     index:
       title: "Bài viết"
       create: "Tạo bài viết"
+      empty_list: "Không có bài viết nào"
     new:
       title: "Tạo bài viết"
       submit: "Tạo bài viết"
@@ -109,6 +111,7 @@ vi:
     following_posts:
       title: "New feed"
       create: "Tạo bài viết"
+      empty_list: "Không có bài viết nào"
   post:
     status:
       private: "Private"
