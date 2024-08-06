@@ -3,6 +3,6 @@ FactoryBot.define do
     user
     title { "Title example" }
     content { "Content example" }
-    status { "public" }
+    status {[0, 1].sample}
   end
 end
