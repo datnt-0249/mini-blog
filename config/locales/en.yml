@@ -65,12 +65,13 @@ en:
       submit: "Submit"
     create:
       invalid: "Invalid email or password"
+      success: "Logged in successfully"
   posts:
     index:
       title: "Posts"
       create: "Create post"
       empty_list: "There's no post here"
-
+      success: "Get all post successfullly"
     new:
       title: "Create Post"
       submit: "Create Post"
@@ -122,5 +123,11 @@ en:
   relationships:
     create:
       user_not_found: "User not found"
+      success: "Follow user successfully"
     destroy:
       user_not_found: "User not found"
+      success: "Unfollow user successfully"
+  api:
+    errors:
+      authenticate: "Email or password is invalid"
+      forbidden: "You are not authorized to perform this action"

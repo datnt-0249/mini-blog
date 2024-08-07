@@ -48,6 +48,7 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]
 # gem "image_processing", "~> 1.2"
 
+gem "active_model_serializers"
 gem "config"
 gem "faker"
 gem "htmlbeautifier"
