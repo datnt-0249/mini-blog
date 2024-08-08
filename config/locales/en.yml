@@ -28,6 +28,8 @@ en:
   static_pages:
     home:
       title: "Home Page"
+      export_post: "Export posts"
+      submit: "Submit"
   shared:
     stats:
       post: "Post"
@@ -114,6 +116,13 @@ en:
       title: "Bảng tin"
       create: "Create post"
       empty_list: "There's no post here"
+      required_login: "You need login first"
+    import:
+      success: "Import from file successfully"
+      failed: "Import from file failed"
+      invalid_info: "Post information invalid"
+      invalid_file: "File invalid"
+      required_login: "You need login first"
   post:
     status:
       private: "Private"
@@ -131,3 +140,5 @@ en:
     errors:
       authenticate: "Email or password is invalid"
       forbidden: "You are not authorized to perform this action"
+  services:
+    line_error: "Row %{row} has the following errors:"

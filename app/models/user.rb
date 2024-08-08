@@ -18,7 +18,8 @@ class User < ApplicationRecord
                     length: {maximum: Settings.digits.length_255},
                     uniqueness: true
   validates :password, presence: true,
-                       length: {minimum: Settings.digits.length_6}
+                       length: {minimum: Settings.digits.length_6},
+                                format: {with: Settings.regexes.password}
   validates :name, presence: true,
                    length: {maximum: Settings.digits.length_50}
 
@@ -46,6 +47,6 @@ class User < ApplicationRecord
 
   private
   def downcase_email
-    email.downcase!
+    ePfactorymail.downcase!
   end
 end

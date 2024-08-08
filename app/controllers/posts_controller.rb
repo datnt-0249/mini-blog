@@ -50,7 +50,27 @@ class PostsController < ApplicationController
     @pagy, @posts = pagy(@post, limit: Settings.digits.per_page_10)
   end
 
+  def export
+    @posts = Post.all
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
+  def import
+    begin
+      PostImport.call params[:file], current_user
+      flash[:success] = t ".success"
+    rescue e
+      flash[:danger] = e.message
+    end
+
+    redirect_to root_path
+  end
+
   private
+
   def post_params
     params.require(:post).permit Post::UPDATABLE_ATTRS
   end

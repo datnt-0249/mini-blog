@@ -28,6 +28,8 @@ vi:
   static_pages:
     home:
       title: "Trang chủ"
+      export_post: "Tải về danh sách bài viết"
+      submit: "Nhập file"
   shared:
     stats:
       post: "Bài viết"
@@ -114,6 +116,13 @@ vi:
       title: "New feed"
       create: "Tạo bài viết"
       empty_list: "Không có bài viết nào"
+      required_login: "Bạn cần đăng nhập trước"
+    import:
+      success: "Nhập file thành công"
+      failed: "Nhập file thất bại"
+      invalid_info: "Thông tin bài viết không hợp lệ"
+      invalid_file: "File không hợp lệ"
+      required_login: "Bạn cần đăng nhập trước"
   post:
     status:
       private: "Private"
@@ -129,3 +138,5 @@ vi:
     errors:
       authenticate: "Email hoặc mật khẩu không hợp lệ"
       forbidden: "Bạn không có quyền thực hiện hành động này"
+  services:
+    line_error: "Dòng %{row} có các lỗi sau:"
