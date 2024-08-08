@@ -4,7 +4,7 @@ Post.destroy_all
 10.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@gmail.com"
-  password = "password"
+  password = "password1A"
   User.create!(name: name,
                email: email,
                password: password,

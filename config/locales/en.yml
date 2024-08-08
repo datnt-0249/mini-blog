@@ -28,6 +28,8 @@ en:
   static_pages:
     home:
       title: "Home Page"
+      export_post: "Export posts"
+      submit: "Submit"
   shared:
     stats:
       post: "Post"
@@ -114,6 +116,11 @@ en:
       title: "Bảng tin"
       create: "Create post"
       empty_list: "There's no post here"
+    import:
+      success: "Import from file successfully"
+      failed: "Import from file failed"
+      invalid_info: "Post information invalid"
+      invalid_file: "File invalid"
   post:
     status:
       private: "Private"

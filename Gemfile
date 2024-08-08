@@ -49,11 +49,13 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "active_model_serializers"
+gem "caxlsx_rails"
 gem "config"
 gem "faker"
 gem "htmlbeautifier"
 gem "pagy"
 gem "rails-i18n"
+gem "roo"
 gem "tailwindcss-rails"
 
 group :development, :test do

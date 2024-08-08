@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+  rescue_from ActiveRecord::RecordInvalid, with: :record_in_valid
+  rescue_from Zip::Error, with: :invalid_file_format
 
   before_action :set_locale
   include SessionsHelper
@@ -24,6 +26,16 @@ class ApplicationController < ActionController::Base
 
   def record_not_found
     flash[:warning] = t ".user_not_found"
+    redirect_to root_path
+  end
+
+  def record_in_valid
+    flash[:warning] = t ".user_not_found"
+    redirect_to root_path
+  end
+
+  def invalid_file_format exception
+    flash[:danger] = exception
     redirect_to root_path
   end
 end

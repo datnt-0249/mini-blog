@@ -23,8 +23,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @pagy, @posts = pagy(@user.posts.newest,
-                         limit: Settings.digits.per_page_10)
+    if current_user? @user
+      @pagy, @posts = pagy(@user.posts.newest,
+                           limit: Settings.digits.per_page_10)
+    else
+      @pagy, @posts = pagy(@user.posts.filter_by_status(:public).newest,
+                           limit: Settings.digits.per_page_10)
+    end
   end
 
   private
