@@ -50,6 +50,30 @@ class PostsController < ApplicationController
     @pagy, @posts = pagy(@post, limit: Settings.digits.per_page_10)
   end
 
+  def export
+    @posts = Post.all
+    respond_to do |format|
+      format.html
+      format.xlsx
+    end
+  end
+
+  def import
+    column_mapping = {
+      "Title" => :title,
+      "Content" => :content,
+      "Status" => :status
+    }
+
+    validate_file params[:file]
+    xlsx = Roo::Excelx.new(params[:file])
+    sheet = xlsx.sheet(0)
+    headers = sheet.row(1)
+    header_mapping = headers.map{|header| column_mapping[header]}
+
+    read_sheet header_mapping
+  end
+
   private
   def post_params
     params.require(:post).permit Post::UPDATABLE_ATTRS
@@ -65,5 +89,24 @@ class PostsController < ApplicationController
 
   def correct_user
     redirect_to root_path, status: :see_other unless current_user? @post.user
+  end
+
+  def read_sheet header_mapping
+    (Settings.import.header_row..sheet.last_row).each do |row_index|
+      row = Hash[[header_mapping, sheet.row(row_index)].transpose]
+      next if row_hash.values.all?(&:nil?)
+
+      @post = current_user.posts.build row
+
+      @post.save!
+      flash[:success] = t ".success"
+    end
+  end
+
+  def validate_file file
+    ext = File.extname(file.original_filename)
+    return if [".xls", "xlsx"].include? ext
+
+    raise Zip::Error, t(".invalid_file")
   end
 end
