@@ -65,11 +65,13 @@ vi:
       submit: "Đăng nhập"
     create:
       invalid: "Email hoặc mật khẩu không hợp lệ"
+      success: "Đăng nhập thành công"
   posts:
     index:
       title: "Bài viết"
       create: "Tạo bài viết"
       empty_list: "Không có bài viết nào"
+      success: "Lấy danh sách bài viết thành công"
     new:
       title: "Tạo bài viết"
       submit: "Tạo bài viết"
@@ -120,5 +122,10 @@ vi:
     edit: "Chỉnh sửa"
   relationships:
     create:
+      success: "Theo dõi người dùng thành công"
     destroy:
       user_not_found: "User not found"
+  api:
+    errors:
+      authenticate: "Email hoặc mật khẩu không hợp lệ"
+      forbidden: "Bạn không có quyền thực hiện hành động này"
