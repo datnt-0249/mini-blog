@@ -37,6 +37,7 @@ vi:
   users:
     index:
       title: "Danh sách người dùng"
+      empty_list: "Không có người dùng nào"
     user:
       view_detail: "Xem chi tiết"
     new:
@@ -61,6 +62,10 @@ vi:
     follower_count:
       follower: "Người theo dõi"
     required_login: "Bạn cần đăng nhập trước"
+    search_form:
+      username: "Tên"
+      email: "Email"
+      created_at: "Ngày tạo"
   sessions:
     new:
       title: "Đăng nhập"

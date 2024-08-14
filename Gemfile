@@ -55,6 +55,7 @@ gem "faker"
 gem "htmlbeautifier"
 gem "pagy"
 gem "rails-i18n"
+gem "ransack"
 gem "roo"
 gem "tailwindcss-rails"
 

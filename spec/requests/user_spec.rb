@@ -3,6 +3,7 @@ include SessionsHelper
 
 RSpec.describe UsersController, type: :controller do
   let(:user) {create(:user)}
+  let(:users) {create_list(:user, 5)}
   let!(:posts) {create_list(:post, 15, user: user)}
 
   before do
@@ -10,14 +11,37 @@ RSpec.describe UsersController, type: :controller do
   end
 
   describe "GET /index" do
-    it "assigns @user" do
-      get :index
-      expect(assigns(:users)).to eq([user])
+    context "when search params not present" do
+      it "assigns @user" do
+        get :index
+        expect(assigns(:users)).to eq([user])
+      end
+
+      it "render index template" do
+        get :index
+        expect(response).to  render_template("index")
+      end
     end
 
-    it "render index template" do
-      get :index
-      expect(response).to  render_template("index")
+    context "when search params present" do
+      it "search by user name" do
+        get :index, params: {q: { name_cont: users.first.name }}
+        expect(assigns(:users)).to eq([users.first])
+      end
+
+      it "search by email" do
+        get :index, params: {q: { email_cont: users.first.email }}
+        expect(assigns(:users)).to eq([users.first])
+      end
+
+      it "search by created at" do
+        users.first.update_column(:created_at, 5.days.ago)
+        from_date = 6.days.ago
+        to_date = 3.days.ago
+
+        get :index, params: { q: { created_at_gteq: from_date, created_at_lteq: to_date }}
+        expect(assigns(:users)).to eq([users.first])
+      end
     end
   end
 
