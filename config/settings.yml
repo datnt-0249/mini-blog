@@ -1,7 +1,11 @@
 regexes:
   email: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  password: !ruby/regexp /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/
 digits:
   length_6: 6
   length_50: 50
   length_255: 255
   per_page_10: 10
+import:
+  header_row: 1
+user_default_avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_kSSoomJ9hiFXmiF2RdZlwx72Y23XsT6iwQ&s"

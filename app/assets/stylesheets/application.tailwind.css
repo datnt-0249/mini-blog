@@ -18,3 +18,15 @@ label.required::after {
   content: "*";
   color: red;
 }
+
+.alert-danger {
+  @apply bg-red-100 border-red-500 text-red-700
+}
+
+.alert-success {
+  @apply bg-green-100 border-green-500 text-green-700
+}
+
+.alert-warning {
+  @apply bg-orange-100 border-orange-500 text-orange-700
+}
