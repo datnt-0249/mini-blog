@@ -3,8 +3,14 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: %i(show)
 
   def index
-    @pagy, @users = pagy(User.ordered_by_name,
-                         limit: Settings.digits.per_page_10)
+    @q = User.ransack(params[:q])
+    if params[:q].present?
+      @pagy, @users = pagy(@q.result(distinct: true),
+                           limit: Settings.digits.per_page_10)
+    else
+      @pagy, @users = pagy(User.ordered_by_name,
+                           limit: Settings.digits.per_page_10)
+    end
   end
 
   def new

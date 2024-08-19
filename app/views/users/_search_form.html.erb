@@ -1,0 +1,19 @@
+<%= search_form_for @q do |f| %>
+  <div class="flex flex-wrap gap-x-10 gap-y-5 mb-5">
+    <div class="flex items-center gap-x-5">
+      <%= f.label :name_cont, t(".username"), class: "block text-sm font-medium text-gray-900" %>
+      <%= f.search_field :name_cont, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block" %>
+    </div>
+    <div class="flex items-center gap-x-5">
+      <%= f.label :email_cont, t(".email"), class: "block text-sm font-medium text-gray-900" %>
+      <%= f.search_field :email_cont, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block" %>
+    </div>
+    <div class="flex items-center gap-x-5">
+      <%= f.label :created_at, t(".created_at"), class: "block text-sm font-medium text-gray-900" %>
+      <%= f.date_field :created_at_gteq, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block" %>
+      <span class="text-xl text-gray-700">-</span>
+      <%= f.date_field :created_at_lteq, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block" %>
+    </div>
+    <%= f.submit "Search", class: "text-white bg-green-700 hover:bg-green-800 font-medium rounded-md text-sm px-5 text-center cursor-pointer" %>
+  </div>
+<% end %>

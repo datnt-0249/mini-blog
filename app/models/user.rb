@@ -45,6 +45,10 @@ class User < ApplicationRecord
     liked_posts.include? post
   end
 
+  def self.ransackable_attributes _auth_object = nil
+    %w(name email created_at)
+  end
+
   private
   def downcase_email
     ePfactorymail.downcase!

@@ -37,6 +37,7 @@ en:
   users:
     index:
       title: "Users"
+      empty_list: "No user found"
     user:
       view_detail: "View detail"
     new:
@@ -61,6 +62,10 @@ en:
     follower_count:
       follower: "Follower"
     required_login: "You need login first"
+    search_form:
+      username: "Username"
+      email: "Email"
+      created_at: "Create at"
   sessions:
     new:
       title: "Login"
